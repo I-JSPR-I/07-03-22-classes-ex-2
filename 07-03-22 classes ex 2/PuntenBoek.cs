@@ -6,22 +6,46 @@ namespace _07_03_22_classes_ex_2
 {
     class PuntenBoek
     {
-        public int Punt;
-        public int totaal;
-        public int i = 0;
+        private int punt;
+        private int totaal;
+        private int totaalprocent;
+        private int i = 0;
+
+        public int Punt
+        {
+            get { return punt; }  
+            set { punt = value; } 
+        }
+        public int Totaal
+        {
+            get { return totaal; }
+            set { totaal = value; }
+        }
+        public int TotaalProcent
+        {
+            get { return totaalprocent; }
+            set { totaalprocent = value; }
+        }
+        public int I
+        {
+            get { return i; }
+            set { i = value; }
+        }
+
         public PuntenBoek()
         {
-            Punt = 0;
+            punt = 0;
             totaal = 0;
+            totaalprocent = 0;
             i = 0;
         }
 
         public PuntenBoek(int IntPunten)
         {
-            Punt = IntPunten;
-            totaal = totaal + Punt;
+            punt = IntPunten;
+            totaal = totaal + punt;
             i++;
-
+            totaalprocent = totaal / i;
         }
     }
 }
